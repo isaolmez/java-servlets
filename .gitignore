@@ -1,6 +1,10 @@
 **/target
 
 #Eclipse
-.project
-.settings
-.classpath
+**/.project
+**/.settings
+**/.classpath
+
+**/.idea
+**/.sonar
+**/*.iml

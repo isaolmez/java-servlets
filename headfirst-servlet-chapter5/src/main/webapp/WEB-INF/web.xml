@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+        http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+         version="2.4">
+    <servlet>
+        <servlet-name>InitParamsTester</servlet-name>
+        <servlet-class>com.isa.headfirst.servlet.chapter5.initparams.InitParamsTester</servlet-class>
+        <init-param>
+            <param-name>adminEmail</param-name>
+            <param-value>admin@mymail.com</param-value>
+        </init-param>
+        <init-param>
+            <param-name>mainEmail</param-name>
+            <param-value>main@mymail.com</param-value>
+        </init-param>
+    </servlet>
+    <servlet>
+        <servlet-name>DispatchInitParamsTester</servlet-name>
+        <servlet-class>com.isa.headfirst.servlet.chapter5.initparams.DispatchInitParamsTester</servlet-class>
+        <init-param>
+            <param-name>adminEmail</param-name>
+            <param-value>admin@mymail.com</param-value>
+        </init-param>
+        <init-param>
+            <param-name>mainEmail</param-name>
+            <param-value>main@mymail.com</param-value>
+        </init-param>
+    </servlet>
+    <servlet>
+        <servlet-name>ListenerTester</servlet-name>
+        <servlet-class>com.isa.headfirst.servlet.chapter5.listener.ListenerTester</servlet-class>
+    </servlet>
+
+    <context-param>
+        <param-name>databaseName</param-name>
+        <param-value>myDatabase</param-value>
+    </context-param>
+    <context-param>
+        <param-name>databaseUser</param-name>
+        <param-value>myUser</param-value>
+    </context-param>
+    <context-param>
+        <param-name>breed</param-name>
+        <param-value>Husky</param-value>
+    </context-param>
+
+    <listener>
+        <listener-class>com.isa.headfirst.servlet.chapter5.listener.context.MyServletContextListener</listener-class>
+    </listener>
+
+    <servlet-mapping>
+        <servlet-name>InitParamsTester</servlet-name>
+        <url-pattern>/TestInitParams.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DispatchInitParamsTester</servlet-name>
+        <url-pattern>/TestDispatchInitParams.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListenerTester</servlet-name>
+        <url-pattern>/TestListener.do</url-pattern>
+    </servlet-mapping>
+</web-app>
