@@ -1,6 +1,4 @@
-package com.isa.headfirst.servlet.chapter5.listener.context;
-
-import com.isa.headfirst.servlet.chapter5.listener.Dog;
+package com.isa.headfirst.servlet.chapter5.listener.servletcontext;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;

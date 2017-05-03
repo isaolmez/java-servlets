@@ -47,7 +47,16 @@
     </context-param>
 
     <listener>
-        <listener-class>com.isa.headfirst.servlet.chapter5.listener.context.MyServletContextListener</listener-class>
+        <listener-class>com.isa.headfirst.servlet.chapter5.listener.servletcontext.MyServletContextListener</listener-class>
+    </listener>
+    <listener>
+        <listener-class>com.isa.headfirst.servlet.chapter5.listener.servletcontextattribute.MyServletContextAttributeListener</listener-class>
+    </listener>
+    <listener>
+        <listener-class>com.isa.headfirst.servlet.chapter5.listener.request.MyServletRequestListener</listener-class>
+    </listener>
+    <listener>
+        <listener-class>com.isa.headfirst.servlet.chapter5.listener.requestattribute.MyServletRequestAttributeListener</listener-class>
     </listener>
 
     <servlet-mapping>
