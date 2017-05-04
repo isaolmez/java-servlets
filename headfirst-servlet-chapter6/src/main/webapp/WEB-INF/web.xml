@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+        http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+         version="2.4">
+    <servlet>
+        <servlet-name>Sessionless</servlet-name>
+        <servlet-class>com.isa.headfirst.servlet.chapter6.session.Sessionless</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SessionTest1</servlet-name>
+        <servlet-class>com.isa.headfirst.servlet.chapter6.session.SessionTest1</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SessionTest2</servlet-name>
+        <servlet-class>com.isa.headfirst.servlet.chapter6.session.SessionTest2</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UrlRewriteTest</servlet-name>
+        <servlet-class>com.isa.headfirst.servlet.chapter6.urlrewrite.UrlRewriteTest</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SessionApiTest</servlet-name>
+        <servlet-class>com.isa.headfirst.servlet.chapter6.api.SessionApiTest</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CookieTest</servlet-name>
+        <servlet-class>com.isa.headfirst.servlet.chapter6.api.CookieTest</servlet-class>
+    </servlet>
+
+    <!--Configuring timeout in DD-->
+    <!--<session-config>-->
+    <!--<session-timeout>1</session-timeout>-->
+    <!--</session-config>-->
+
+    <servlet-mapping>
+        <servlet-name>Sessionless</servlet-name>
+        <url-pattern>/TestSession.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SessionTest1</servlet-name>
+        <url-pattern>/TestSession1.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SessionTest2</servlet-name>
+        <url-pattern>/TestSession2.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UrlRewriteTest</servlet-name>
+        <url-pattern>/TestUrlRewrite.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SessionApiTest</servlet-name>
+        <url-pattern>/TestSessionApi.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CookieTest</servlet-name>
+        <url-pattern>/TestCookie.do</url-pattern>
+    </servlet-mapping>
+</web-app>
