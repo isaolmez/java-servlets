@@ -58,4 +58,17 @@
         <servlet-name>CookieTest</servlet-name>
         <url-pattern>/TestCookie.do</url-pattern>
     </servlet-mapping>
+    
+    <listener>
+        <listener-class>com.isa.headfirst.servlet.chapter6.listener.MyHttpSessionActivationListener</listener-class>
+    </listener>
+    <listener>
+        <listener-class>com.isa.headfirst.servlet.chapter6.listener.MyHttpSessionAttribute</listener-class>
+    </listener>
+    <listener>
+        <listener-class>com.isa.headfirst.servlet.chapter6.listener.MyHttpSessionAttributeListener</listener-class>
+    </listener>
+    <listener>
+        <listener-class>com.isa.headfirst.servlet.chapter6.listener.MyHttpSessionListener</listener-class>
+    </listener>
 </web-app>

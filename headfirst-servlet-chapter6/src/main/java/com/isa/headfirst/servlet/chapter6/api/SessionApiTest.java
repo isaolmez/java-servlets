@@ -13,9 +13,12 @@ public class SessionApiTest extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        LOG.info("Serving GET request");
         response.setContentType("text/html");
         HttpSession session = request.getSession();
-        session.setAttribute("path", request.getRequestURL());
+        session.setAttribute("sessionAttribute1", "value1");
+        session.setAttribute("sessionAttribute1", "value1");
+        session.removeAttribute("sessionAttribute1");
         session.setMaxInactiveInterval(10);
         RequestDispatcher view = request.getRequestDispatcher("dispatched.jsp");
         view.forward(request, response);
@@ -23,6 +26,7 @@ public class SessionApiTest extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        LOG.info("Serving POST request");
         response.setContentType("text/html");
         HttpSession session = request.getSession();
         session.invalidate();

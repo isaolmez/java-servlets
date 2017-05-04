@@ -11,16 +11,16 @@ public class MyServletContextAttributeListener implements ServletContextAttribut
 
     @Override
     public void attributeAdded(ServletContextAttributeEvent event) {
-        LOG.info("Attribute is added. Name: {},  value: {}", event.getName(), event.getValue());
+        LOG.info("Context attribute is added. Name: {},  value: {}", event.getName(), event.getValue());
     }
 
     @Override
     public void attributeRemoved(ServletContextAttributeEvent event) {
-        LOG.info("Attribute is removed. Name: {},  value: {}", event.getName(), event.getValue());
+        LOG.info("Context attribute is removed. Name: {},  value: {}", event.getName(), event.getValue());
     }
 
     @Override
     public void attributeReplaced(ServletContextAttributeEvent event) {
-        LOG.info("Attribute is replaced. Name: {},  old value: {}", event.getName(), event.getValue());
+        LOG.info("Context attribute is replaced. Name: {},  old value: {}", event.getName(), event.getValue());
     }
 }
